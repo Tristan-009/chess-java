@@ -1,4 +1,13 @@
 package com.tristan.chess.pieces;
 
-public class Pawn {
+public class Pawn extends Piece {
+
+    public Pawn(boolean isWhite) {
+        super(isWhite);
+    }
+
+    @Override
+    public String getSymbol() {
+        return isWhite ? "P" : "p";
+    }
 }

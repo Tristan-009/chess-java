@@ -39,7 +39,7 @@ public class Board {
                 Piece piece = grid[row][col];
 
                 if (piece == null) {
-                    System.out.println(". ");
+                    System.out.print(". ");
                 } else {
                     System.out.print(piece.getSymbol() + " ");
                 }

@@ -15,6 +15,22 @@ public class Board {
                 grid[row][col] = null;
             }
         }
+
+        // Pieces
+        for (int col = 0; col < 8; col++) {
+            grid[1][col] = new Pawn(false);
+        }
+
+        for (int col = 0; col < 8; col++) {
+            grid[6][col] = new Pawn(true);
+        }
+
+        grid[0][0] = new Rook(false);
+        grid[0][7] = new Rook(false);
+
+        grid[7][0] = new Rook(true);
+        grid[7][7] = new Rook(true);
+
     }
 
     public Piece getPiece(int row, int col) {

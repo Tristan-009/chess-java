@@ -10,10 +10,13 @@ public class Main {
         Board board = new Board();
         board.display();
 
-        Position p = new Position(6, 4);
+        Board b = new Board();
+        Position king = new Position(7, 4);
 
-        System.out.println(p.getRow());
-        System.out.println(p.getCol());
+        System.out.println(
+                board.getPiece(king).getSymbol()
+        );
+
 
     }
 }

@@ -1,4 +1,5 @@
 package com.tristan.chess.board;
+import com.tristan.chess.utils.Position;
 import com.tristan.chess.pieces.*;
 
 public class Board {
@@ -104,5 +105,9 @@ public class Board {
             System.out.println(" " + (8 - row));
         }
         System.out.println("  a b c d e f g h");
+    }
+
+    public Piece getPiece(Position position) {
+        return grid[position.getRow()][position.getCol()];
     }
 }

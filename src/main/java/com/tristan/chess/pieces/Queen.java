@@ -8,6 +8,6 @@ public class Queen extends Piece {
 
     @Override
     public String getSymbol() {
-        return isWhite ? "q" :"Q";
+        return isWhite ? "Q" :"q";
     }
 }

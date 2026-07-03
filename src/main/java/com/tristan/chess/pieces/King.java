@@ -8,7 +8,7 @@ public class King extends Piece {
 
     @Override
     public String getSymbol() {
-        return isWhite ? "k" : "K";
+        return isWhite ? "K" : "k";
     }
 }
 

@@ -8,6 +8,6 @@ public class Bishop extends Piece{
 
     @Override
     public String getSymbol() {
-        return isWhite ? "b" : "B";
+        return isWhite ? "B" : "b";
     }
 }

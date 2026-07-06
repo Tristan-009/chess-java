@@ -9,16 +9,15 @@ public class Main {
 
         Board board = new Board();
 
-        System.out.println("Avant :");
         board.display();
 
-        Position from = new Position(6, 4); // e2
-        Position to = new Position(4, 4);   // e4
+        Position from = new Position(6,4); // e2
+        Position to = new Position(4,4);   // e4
 
         board.movePiece(from, to);
 
         System.out.println();
-        System.out.println("Après :");
+
         board.display();
     }
 }

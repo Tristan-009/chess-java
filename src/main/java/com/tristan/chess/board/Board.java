@@ -83,6 +83,16 @@ public class Board {
 
         Piece piece = getPiece(from);
 
+        if (piece == null) {
+            System.out.println("Aucune pièce ici.");
+            return;
+        }
+
+        if (!piece.isValidMove(from, to, this)) {
+            System.out.println("Coup illégal.");
+            return;
+        }
+
         setPiece(to, piece);
         setPiece(from, null);
     }

@@ -1,5 +1,8 @@
 package com.tristan.chess.pieces;
 
+import com.tristan.chess.board.Board;
+import com.tristan.chess.utils.Position;
+
 public class King extends Piece {
 
     public King(Boolean isWhite) {
@@ -9,6 +12,28 @@ public class King extends Piece {
     @Override
     public String getSymbol() {
         return isWhite ? "K" : "k";
+    }
+
+    @Override
+    public boolean isValidMove(
+            Position from,
+            Position to,
+            Board board) {
+
+        int rowDiff =
+                Math.abs(
+                        to.getRow()
+                                - from.getRow());
+
+        int colDiff =
+                Math.abs(
+                        to.getCol()
+                                - from.getCol());
+
+        return rowDiff <= 1 &&
+                colDiff <= 1 &&
+                (rowDiff != 0 ||
+                        colDiff != 0);
     }
 }
 
